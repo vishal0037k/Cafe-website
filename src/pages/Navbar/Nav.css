@@ -1,0 +1,93 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #FF7E5F, #FD3A69);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .navbar{
+    position: sticky;
+    top: 0px;
+    z-index: 4;
+  }
+  /* Logo and Hamburger Menu */
+  .navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Navbar Links */
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #FFD1C1;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: linear-gradient(135deg, #FF7E5F, #FD3A69);
+      width: 100%;
+      padding: 1rem;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  }
+  
+  /* Ultra-Narrow Screens (Galaxy Z Fold 5) */
+  @media (max-width: 375px) {
+    .navbar-logo {
+      font-size: 1.2rem;
+    }
+  
+    .navbar-links a {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,141 @@
+/* Hero Section */
+.home {
+  height: 100vh; /* Full-screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: url('../../assets/bg.avif') no-repeat center center/cover; 
+  /* background: linear-gradient(135deg, #6a6cdd, #25146f); */
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:  #0c011e97; /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Above the overlay */
+  max-width: 600px;
+  padding: 2rem;
+}
+
+/* Responsive Text Styling */
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff; /* Typing caret effect */
+  width: fit-content;
+  animation: blink-caret 0.75s step-end infinite; /* Blinking caret animation */
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #FF7E5F, #FD3A69);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #FD3A69, #FF7E5F);
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem; /* Reduce heading size for smaller screens */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; /* Adjust paragraph size */
+  }
+
+  .cta-button {
+    font-size: 1rem; /* Adjust button size */
+    padding: 0.5rem 1rem; /* Reduce button padding */
+  }
+}
+
+@media (max-width: 1812px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Media Query for Galaxy Z Fold 5 Folded Mode */
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 1rem; /* Add more padding for smaller screens */
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
